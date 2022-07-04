@@ -3,6 +3,7 @@
 A new Flutter project to calculate BMI(Body Mass Index). In this application, you can set your gender, height, weight and age and see your bmi result. 
 
 ![Screen-Shot](images/first_screen.png)
+![Screen-Shot](images/result_screen.png)
 
 ## Getting Started
 
