@@ -27,19 +27,6 @@ class _FirstScreenState extends State<FirstScreen> {
   late bool reset2 = true;
 
   @override
-  void initState() {
-    // TODO: implement initState
-    // reset();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
     return Scaffold(

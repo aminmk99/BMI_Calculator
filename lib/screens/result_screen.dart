@@ -1,10 +1,9 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import '../colors/colors.dart';
 import '../widgets/my_alert_dialog.dart';
 import 'first_screen.dart';
 
+// ignore: must_be_immutable
 class ResultScreen extends StatelessWidget {
   double result2;
   int age;
@@ -202,18 +201,7 @@ class ResultScreen extends StatelessWidget {
   }
 
   void onYesPressed(BuildContext context) async {
-    // reset();
-    // reset2 = true;
-    // Navigator.pop(context);
-    // Navigator.pop(context, reset2);
-    // await Navigator.push(
-    //   context,
-    //   MaterialPageRoute(builder: (context) {
-    //     return FirstScreen(newValue, age);
-    //   }),
-    // );
     reset2 = true;
-    // navigate(context, reset2);
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
       return FirstScreen(reset: reset2);
     }));
@@ -221,10 +209,6 @@ class ResultScreen extends StatelessWidget {
 
   void onNoPressed(BuildContext context) {
     reset2 = false;
-    // Navigator.pop(context);
-    // Navigator.pop(context);
-    // naviage(context, reset2);
-    // navigate(context, reset2);
     Navigator.pop(context, reset);
     Navigator.pop(context, reset);
   }
