@@ -25,6 +25,7 @@ class _FirstScreenState extends State<FirstScreen> {
   double _currentSliderValue = 183;
   var height = 183;
   late bool reset2 = true;
+  // var page = ResultScreen(result2, newValue, age, weight, isMale, isFemale)
 
   @override
   Widget build(BuildContext context) {

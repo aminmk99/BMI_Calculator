@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../colors/colors.dart';
 import '../widgets/my_alert_dialog.dart';
 import 'first_screen.dart';
@@ -205,15 +206,16 @@ class ResultScreen extends StatelessWidget {
 
   void onYesPressed(BuildContext context) async {
     reset2 = true;
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-      return FirstScreen(reset: reset2);
-    }));
+
+    Get.off(
+      () => FirstScreen(reset: reset2),
+      transition: Transition.zoom,
+    );
   }
 
   void onNoPressed(BuildContext context) {
-    reset2 = false;
-    Navigator.pop(context, reset);
-    Navigator.pop(context, reset);
+    Get.back();
+    Get.back();
   }
 
   void reset() {
@@ -273,23 +275,5 @@ class ResultScreen extends StatelessWidget {
             color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
       );
     }
-  }
-
-  navigate(BuildContext context, bool reset) {
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) {
-          return FirstScreen(
-            reset: reset,
-          );
-        },
-      ),
-    );
-  }
-
-  navigte2(BuildContext context, bool reset) {
-    Navigator.pop(context, reset);
-    Navigator.pop(context, reset);
   }
 }
