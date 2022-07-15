@@ -19,26 +19,29 @@ class CalculateButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
-    return InkWell(
-      onTap: () async {
-        result2 = (weight / (newValue * newValue)) * 10000;
-        result2 = double.parse((result2).toStringAsFixed(2));
-        final result = await Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) {
-            return ResultScreen(result2, newValue, age, weight, isMale, isFemale);
-          }),
-        );
-      },
-      child: Container(
-        width: size.width,
-        height: 60,
-        color: kPinkColor,
-        child: Center(
-          child: Text(
-            'CALCULATE YOUR BMI',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
+    return Tooltip(
+      message: "Calculate your BMI",
+      child: InkWell(
+        onTap: () async {
+          result2 = (weight / (newValue * newValue)) * 10000;
+          result2 = double.parse((result2).toStringAsFixed(2));
+          final result = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) {
+              return ResultScreen(result2, newValue, age, weight, isMale, isFemale);
+            }),
+          );
+        },
+        child: Container(
+          width: size.width,
+          height: 60,
+          color: kPinkColor,
+          child: Center(
+            child: Text(
+              'CALCULATE YOUR BMI',
+              style: TextStyle(
+                  color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
+            ),
           ),
         ),
       ),

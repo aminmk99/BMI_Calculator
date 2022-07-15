@@ -180,17 +180,20 @@ class ResultScreen extends StatelessWidget {
                 },
               ); // Navigator.pop(context);
             },
-            child: Container(
-              width: size.width,
-              height: 60,
-              color: kPinkColor,
-              child: Center(
-                child: Text(
-                  'RE-CALCULATE YOUR BMI',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600),
+            child: Tooltip(
+              message: "Recalculate your BMI",
+              child: Container(
+                width: size.width,
+                height: 60,
+                color: kPinkColor,
+                child: Center(
+                  child: Text(
+                    'RE-CALCULATE YOUR BMI',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
             ),
