@@ -22,21 +22,5 @@ class CircleButtons extends StatelessWidget {
         ),
       ),
     );
-    return InkWell(
-      onTap: () {
-        operation();
-      },
-      child: Container(
-        width: 60,
-        height: 60,
-        decoration:
-            BoxDecoration(color: kLightNavyBlueColor, shape: BoxShape.circle),
-        child: Icon(
-          icon,
-          color: Colors.grey,
-          size: 45,
-        ),
-      ),
-    );
   }
 }

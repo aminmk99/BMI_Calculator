@@ -66,7 +66,11 @@ class _FirstScreenState extends State<FirstScreen> {
                       'MALE',
                       () {
                         setState(() {
-                          isMale = true;
+                          if (isMale == false) {
+                            isMale = true;
+                          } else {
+                            isMale = false;
+                          }
                           isFemale = false;
                         });
                       },
@@ -77,7 +81,11 @@ class _FirstScreenState extends State<FirstScreen> {
                     GenderContainer(isFemale, Icons.female, 'FEMALE', () {
                       setState(() {
                         isMale = false;
-                        isFemale = true;
+                        if (isFemale == false) {
+                          isFemale = true;
+                        } else {
+                          isFemale = false;
+                        }
                       });
                     })
                   ],
@@ -252,7 +260,7 @@ class _FirstScreenState extends State<FirstScreen> {
                                 () {
                                   setState(() {
                                     if (age < 120) {
-                                      age ++;
+                                      age++;
                                     }
                                   });
                                 },
