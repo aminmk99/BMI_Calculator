@@ -178,7 +178,9 @@ class _FirstScreenState extends State<FirstScreen> {
                                 Icons.remove,
                                 () {
                                   setState(() {
-                                    weight--;
+                                    if (weight > 10) {
+                                      weight--;
+                                    }
                                     weight2 = weight;
                                   });
                                 },
@@ -234,7 +236,9 @@ class _FirstScreenState extends State<FirstScreen> {
                                 Icons.remove,
                                 () {
                                   setState(() {
-                                    age--;
+                                    if (age > 3) {
+                                      age--;
+                                    }
                                   });
                                 },
                               ),
@@ -245,7 +249,9 @@ class _FirstScreenState extends State<FirstScreen> {
                                 Icons.add,
                                 () {
                                   setState(() {
-                                    age++;
+                                    if (age < 120) {
+                                      age ++;
+                                    }
                                   });
                                 },
                               ),
