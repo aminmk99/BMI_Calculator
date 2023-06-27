@@ -178,7 +178,7 @@ class _FirstScreenState extends State<FirstScreen> {
                                 Icons.remove,
                                 () {
                                   setState(() {
-                                    if (weight > 10) {
+                                    if (weight > 12) {
                                       weight--;
                                     }
                                     weight2 = weight;
@@ -190,7 +190,9 @@ class _FirstScreenState extends State<FirstScreen> {
                               ),
                               CircleButtons(Icons.add, () {
                                 setState(() {
-                                  weight++;
+                                  if (weight < 450) {
+                                    weight++;
+                                  }
                                   weight2 = weight;
                                 });
                               })
