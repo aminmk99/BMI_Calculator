@@ -126,8 +126,8 @@ class _FirstScreenState extends State<FirstScreen> {
                       ),
                       Slider(
                         value: _currentSliderValue,
-                        min: 99,
-                        max: 250,
+                        min: 91,
+                        max: 240,
                         divisions: 150,
                         activeColor: kPinkColor,
                         onChanged: (double value) {
