@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../colors/colors.dart';
 
 class GenderContainer extends StatelessWidget {
-  bool gender;
+  final bool gender;
   final IconData icon;
   final String text;
   final VoidCallback func;
